@@ -7,7 +7,7 @@
 
 int print_solution(char* first_path, char* second_path, char* output_path) {
     solver* s = create_solver(first_path, second_path);
-    if ((s->rows-1) == 0 || (s->columns) == 0) {
+    if ((s->rows-1) == 0 || (s->columns-1) == 0) {
         print_on_file(output_path, "");
     } else if (strcmp(s->first_string, s->second_string) == 0) {
         print_on_file(output_path, s->first_string);
