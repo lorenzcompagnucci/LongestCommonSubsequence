@@ -17,7 +17,7 @@ char* reader(FILE* fin) {
     char* buffer = create_string(file_size(fin)+1, INP_BUFF_ERROR);
     int i = 0;
     char c;
-    while ((c = toupper(fgetc(fin))) != EOF) {
+    while ((c = (char) toupper(fgetc(fin))) != EOF) {
         buffer[i] = c;
         i++;
     }

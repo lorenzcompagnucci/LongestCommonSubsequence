@@ -5,8 +5,8 @@
 #include "file.h"
 #include "mem_utils.h"
 
-int solve(char* first_path, char* second_path, char* output_path) {
-    solver* s = get_solver(first_path, second_path);
+int print_solution(char* first_path, char* second_path, char* output_path) {
+    solver* s = create_solver(first_path, second_path);
     if ((s->rows-1) == 0 || (s->columns) == 0) {
         print_on_file(output_path, "");
     } else if (strcmp(s->first_string, s->second_string) == 0) {
@@ -20,12 +20,12 @@ int solve(char* first_path, char* second_path, char* output_path) {
     return 1;
 }
 
-solver* get_solver(char* first_path, char* second_path) {
+solver* create_solver(char* first_path, char* second_path) {
     solver* s = (solver*) malloc(sizeof(solver));
     s->first_string = read_file(first_path);
     s->second_string = read_file(second_path);
-    s->rows = strlen(s->first_string) + 1;
-    s->columns = strlen(s->second_string) + 1;
+    s->rows = (int) strlen(s->first_string) + 1;
+    s->columns = (int) strlen(s->second_string) + 1;
     s->values = create_int_matrix(s->rows, s->columns);
     s->instructions = create_char_matrix(s->rows, s->columns);
     return s;
@@ -52,11 +52,10 @@ void fill_matrixes(solver* s) {
 void create_solution(solver* s) {
     int m = s->rows - 1;
     int n = s->columns - 1;
-    char seq = s->instructions[m][n];
     int i = s->values[m][n];
     s->solution = create_string(i+1, SOLUTION_ERROR);
     s->solution[i] = '\0';
-    while (seq != 0) {
+    while (s->instructions[m][n] != 0) {
         if (s->instructions[m][n] == 'd') {
             s->solution[i-1] = s->first_string[m-1];
             i--;
@@ -67,7 +66,6 @@ void create_solution(solver* s) {
         } else if (s->instructions[m][n] == 't') {
             m--;
         }
-        seq = s->instructions[m][n];
     }
 }
 

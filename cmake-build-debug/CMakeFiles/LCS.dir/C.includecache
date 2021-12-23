@@ -6,9 +6,37 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/file.c
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+file.h
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/file.h
+mem_utils.h
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.h
+
 C:/Users/loren/CLionProjects/LongestCommonSubsequence/file.h
 stdio.h
 -
+
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/main.c
+stdio.h
+-
+mem_utils.h
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.h
+
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+mem_utils.h
+C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.h
 
 C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.h
 solver.h

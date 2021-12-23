@@ -8,5 +8,5 @@ int main(int argc, char *argv[]) {
         printf("LCS first_string_path second_string_path output_path\n");
         return 0;
     }
-    return solve(argv[1], argv[2], argv[3]);
+    return print_solution(argv[1], argv[2], argv[3]);
 }

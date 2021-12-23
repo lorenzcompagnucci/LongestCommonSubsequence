@@ -13,8 +13,8 @@ typedef struct solver {
     char* solution;
 } solver;
 
-int solve(char* first_path, char* second_path, char* output_path);
-solver* get_solver(char* first_path, char* second_path);
+int print_solution(char* first_path, char* second_path, char* output_path);
+solver* create_solver(char* first_path, char* second_path);
 void fill_matrixes(solver* s);
 void create_solution(solver* s);
 int get_max(int n1, int n2);
