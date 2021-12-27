@@ -1,18 +1,17 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/file.c" "C:/Users/loren/CLionProjects/LongestCommonSubsequence/cmake-build-debug/CMakeFiles/LCS.dir/file.c.obj"
-  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/main.c" "C:/Users/loren/CLionProjects/LongestCommonSubsequence/cmake-build-debug/CMakeFiles/LCS.dir/main.c.obj"
-  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.c" "C:/Users/loren/CLionProjects/LongestCommonSubsequence/cmake-build-debug/CMakeFiles/LCS.dir/mem_utils.c.obj"
-  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/solver.c" "C:/Users/loren/CLionProjects/LongestCommonSubsequence/cmake-build-debug/CMakeFiles/LCS.dir/solver.c.obj"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/file.c" "CMakeFiles/LCS.dir/file.c.obj" "gcc" "CMakeFiles/LCS.dir/file.c.obj.d"
+  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/main.c" "CMakeFiles/LCS.dir/main.c.obj" "gcc" "CMakeFiles/LCS.dir/main.c.obj.d"
+  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/mem_utils.c" "CMakeFiles/LCS.dir/mem_utils.c.obj" "gcc" "CMakeFiles/LCS.dir/mem_utils.c.obj.d"
+  "C:/Users/loren/CLionProjects/LongestCommonSubsequence/solver.c" "CMakeFiles/LCS.dir/solver.c.obj" "gcc" "CMakeFiles/LCS.dir/solver.c.obj.d"
   )
 
 # Targets to which this target links.

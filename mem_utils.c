@@ -43,23 +43,16 @@ int** create_int_matrix(int rows, int columns) {
     return matrix;
 }
 
-void free_char_matrix(char** matrix, int rows) {
-    if (matrix != NULL) {
+void free_matrixes(char** char_matrix, int** int_matrix, int rows) {
+    if (char_matrix != NULL && int_matrix != NULL) {
         for (int i = 0; i < rows; i++) {
-            free_string(matrix[i]);
+            free_string(char_matrix[i]);
+            free(int_matrix[i]);
         }
-        free(matrix);
-        matrix = NULL;
-    }
-}
-
-void free_int_matrix(int** matrix, int rows) {
-    if (matrix != NULL) {
-        for (int i = 0; i < rows; i++) {
-            free(matrix[i]);
-        }
-        free(matrix);
-        matrix = NULL;
+        free(char_matrix);
+        free(int_matrix);
+        char_matrix = NULL;
+        int_matrix = NULL;
     }
 }
 
@@ -80,8 +73,7 @@ void check_int_matrix(int** matrix, char* errmessage) {
 void free_solver(solver* s) {
     free_string(s->first_string);
     free_string(s->second_string);
-    free_char_matrix(s->instructions, s->rows);
-    free_int_matrix(s->values, s->rows);
+    free_matrixes(s->instructions, s->values, s->rows);
     free_string(s->solution);
     free(s);
 }
