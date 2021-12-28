@@ -26,8 +26,8 @@ solver* create_solver(char* first_path, char* second_path) {
     s->second_string = read_file(second_path);
     s->rows = (int) strlen(s->first_string) + 1;
     s->columns = (int) strlen(s->second_string) + 1;
-    s->values = create_int_matrix(s->rows, s->columns);
-    s->instructions = create_char_matrix(s->rows, s->columns);
+    s->values = (int**) create_matrix(s->rows, s->columns);
+    s->instructions = create_matrix(s->rows, s->columns);
     return s;
 }
 

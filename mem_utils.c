@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include "mem_utils.h"
 
@@ -24,21 +23,12 @@ void check_string(char* string, char* errmessage) {
     }
 }
 
-char** create_char_matrix(int rows, int columns) {
+char** create_matrix(int rows, int columns) {
     char** matrix = (char**) malloc(sizeof(char*) * rows);
     check_char_matrix(matrix, MATRIX_ERR);
     for (int i = 0; i < rows; i++) {
         matrix[i] = (char*) calloc(columns, sizeof(char*));
         check_string(matrix[i], MATRIX_ROW_ERR);
-    }
-    return matrix;
-}
-
-int** create_int_matrix(int rows, int columns) {
-    int** matrix = (int**) malloc(sizeof(int*) * rows);
-    check_int_matrix(matrix, MATRIX_ERR);
-    for (int i = 0; i < rows; i++) {
-        matrix[i] = (int*) calloc(columns, sizeof(int*));
     }
     return matrix;
 }
@@ -57,13 +47,6 @@ void free_matrixes(char** char_matrix, int** int_matrix, int rows) {
 }
 
 void check_char_matrix(char** matrix, char* errmessage) {
-    if (matrix == NULL) {
-        printf("%s\n", errmessage);
-        exit(0);
-    }
-}
-
-void check_int_matrix(int** matrix, char* errmessage) {
     if (matrix == NULL) {
         printf("%s\n", errmessage);
         exit(0);
