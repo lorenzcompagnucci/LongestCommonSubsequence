@@ -70,8 +70,5 @@ void create_solution(solver* s) {
 }
 
 int get_max(int n1, int n2) {
-    if (n1 >= n2) {
-        return n1;
-    }
-    return n2;
+    return (n1 >= n2) ? n1 : n2;
 }

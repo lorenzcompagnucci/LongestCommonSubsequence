@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "mem_utils.h"
+#include "solver.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
