@@ -9,6 +9,7 @@ char* read_file(char* input_file) {
     FILE* fin = fopen(input_file, "r");
     check_file(fin, FIN_ERROR);
     char* buffer = reader(fin);
+    fflush(fin);
     fclose(fin);
     return buffer;
 }
@@ -36,6 +37,7 @@ void print_on_file(char* file, char* message) {
     FILE* fout = fopen(file, "w");
     check_file(fout, FOUT_ERROR);
     fprintf(fout, "%s", message);
+    fflush(fout);
     fclose(fout);
 }
 
