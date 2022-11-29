@@ -1,0 +1,6 @@
+# ninja log v5
+4	122	6914326189997281	CMakeFiles/LCS.dir/main.c.obj	db0ff4064282051f
+1	123	6914326190007287	CMakeFiles/LCS.dir/mem_utils.c.obj	8cef2fe6c4d9dcde
+9	125	6914326190007287	CMakeFiles/LCS.dir/file.c.obj	22090ce510ad15ab
+6	128	6914326190062306	CMakeFiles/LCS.dir/solver.c.obj	153be0235532afae
+128	217	6914326190932325	LCS.exe	1b2e5005ecaddab2
