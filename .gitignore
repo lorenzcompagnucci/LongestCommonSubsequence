@@ -1,1 +1,6 @@
-.idea
+/idea
+/.vscode
+
+src/CMakeCache.txt
+src/CMakeFiles
+src/Makefile
