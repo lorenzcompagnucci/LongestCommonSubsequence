@@ -2,5 +2,7 @@
 /.vscode
 
 src/CMakeCache.txt
-src/CMakeFiles
+src/CMakeFiles/
 src/Makefile
+src/cmake_install.cmake
+src/LCS

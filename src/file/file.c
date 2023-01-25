@@ -13,7 +13,7 @@ static long int fileSize(FILE* fp) {
 }
 
 static char* reader(FILE* fin) {
-    char* buffer = Memory_createString(file_size(fin)+1, INP_BUFF_ERROR);
+    char* buffer = Memory_createString(fileSize(fin)+1, INP_BUFF_ERROR);
     int i = 0;
     char c;
     while ((c = (char) toupper(fgetc(fin))) != EOF) {

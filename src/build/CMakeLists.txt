@@ -3,4 +3,4 @@ project(LCS)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(LCS main.c mem_utils.c mem_utils.h file.c file.h solver.c solver.h)
+add_executable(LCS main.c memory/mem_utils.c memory/mem_utils.h file/file.c file/file.h solver/solver.c solver/solver.h)

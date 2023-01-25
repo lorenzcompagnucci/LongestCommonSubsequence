@@ -69,6 +69,6 @@ int Solver_printSolution(char* first_path, char* second_path, char* output_path)
         createSolution(s);
         File_printOnFile(output_path, s->solution);
     }
-    free_solver(s);
+    Memory_freeSolver(s);
     return 1;
 }
